@@ -1,0 +1,13 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-lastest
+    steps:
+      - uses: actions/checkout@v1
+      - run: npm test
