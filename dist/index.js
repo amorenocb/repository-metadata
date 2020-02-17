@@ -8401,11 +8401,15 @@ const run = () => {
     core.info(`Repo name extracted: ${name}`);
     const branch = repo.getBranch();
     core.info(`Branch name extracted: ${branch}`);
-    // const release = repo.getRelease();
+
+    const release = repo.getRelease();
+    if (release) {
+      core.info(`Release name extracted: ${branch}`);
+    }
 
     core.setOutput('name', name);
     core.setOutput('branch', branch);
-    // core.setOutput('release', release);
+    core.setOutput('release', release);
   } catch (error) {
     core.setFailed(error.message);
   }
