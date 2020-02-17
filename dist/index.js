@@ -8397,12 +8397,13 @@ const repo = __webpack_require__(984);
 
 const run = () => {
   try {
-    // const name = repo.getName();
+    const name = repo.getName();
+    core.info(`Repo name extracted: ${name}`);
     const branch = repo.getBranch();
+    core.info(`Branch name extracted: ${branch}`);
     // const release = repo.getRelease();
 
-    // core.setOutput('name', name);
-    core.info(`Branch name extracted: ${branch}`);
+    core.setOutput('name', name);
     core.setOutput('branch', branch);
     // core.setOutput('release', release);
   } catch (error) {
@@ -25195,10 +25196,11 @@ function onceStrict (fn) {
 
 const { context } = __webpack_require__(469);
 
-// const getName = () => {
-//   const repository = context.repository.toLowerCase().split('/').pop();
-//   return repository;
-// };
+const getName = () => {
+  const slug = context.repository.toLowerCase();
+  const repository = slug.split('/').pop();
+  return repository;
+};
 
 const getBranch = () => {
   const ref = context.ref.toLowerCase();
@@ -25217,7 +25219,7 @@ const getBranch = () => {
 
 
 module.exports = {
-  // getName,
+  getName,
   getBranch,
   // getRelease,
 };

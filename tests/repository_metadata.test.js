@@ -2,10 +2,10 @@ const { context } = require('@actions/github');
 const repo = require('../src/repository_metadata.js');
 
 describe('Get repository name, branch and release tag from git ref', () => {
-  // test('Get name of repository', () => {
-  //   context.repository = 'thenotcompany/some-repository';
-  //   expect(repo.getName()).toBe('some-repository');
-  // });
+  test('Get name of repository', () => {
+    context.repository = 'thenotcompany/some-repository';
+    expect(repo.getName()).toBe('some-repository');
+  });
 
   test('Get name of master branch', () => {
     context.ref = 'refs/head/master';

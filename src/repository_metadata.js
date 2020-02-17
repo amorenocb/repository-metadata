@@ -4,10 +4,11 @@
 
 const { context } = require('@actions/github');
 
-// const getName = () => {
-//   const repository = context.repository.toLowerCase().split('/').pop();
-//   return repository;
-// };
+const getName = () => {
+  const slug = context.repository.toLowerCase();
+  const repository = slug.split('/').pop();
+  return repository;
+};
 
 const getBranch = () => {
   const ref = context.ref.toLowerCase();
@@ -26,7 +27,7 @@ const getBranch = () => {
 
 
 module.exports = {
-  // getName,
+  getName,
   getBranch,
   // getRelease,
 };
