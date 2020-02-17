@@ -25195,8 +25195,11 @@ function onceStrict (fn) {
 // https://github.com/mr-smithers-excellent/docker-build-push/blob/master/src/docker.js
 
 const { context } = __webpack_require__(469);
+const core = __webpack_require__(470);
+
 
 const getName = () => {
+  core.info(context);
   const slug = context.repository.toLowerCase();
   const repository = slug.split('/').pop();
   return repository;

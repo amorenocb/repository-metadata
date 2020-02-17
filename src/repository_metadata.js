@@ -3,8 +3,11 @@
 // https://github.com/mr-smithers-excellent/docker-build-push/blob/master/src/docker.js
 
 const { context } = require('@actions/github');
+const core = require('@actions/core');
+
 
 const getName = () => {
+  core.info(context);
   const slug = context.repository.toLowerCase();
   const repository = slug.split('/').pop();
   return repository;
