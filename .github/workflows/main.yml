@@ -20,4 +20,4 @@ jobs:
       - uses: ./
       - name: Dockerize step
         id: dockerize
-      run: "echo ${{ steps.dockerize.outputs.branch }}"
+        run: "echo ${{ steps.dockerize.outputs.branch }}"
