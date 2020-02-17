@@ -17,23 +17,23 @@ describe('Get repository name, branch and release tag from git ref', () => {
     expect(repo.getBranch()).toBe('some-feature');
   });
 
-  // test('Get name of release', () => {
-  //   context.ref = 'refs/tags/v1.0';
-  //   expect(repo.getRelease()).toBe('v1.0');
-  // });
-  //
-  // test('Get name of release with caps', () => {
-  //   context.ref = 'refs/tags/V1.0';
-  //   expect(repo.getRelease()).toBe('v1.0');
-  // });
-  //
-  // test('Get name of release only numbers', () => {
-  //   context.ref = 'refs/tags/1.0';
-  //   expect(repo.getRelease()).toBe('1.0');
-  // });
-  //
-  // test('Get name of release of non release ref', () => {
-  //   context.ref = 'refs/head/master';
-  //   expect(repo.getRelease()).toBe(null);
-  // });
+  test('Get name of release', () => {
+    context.ref = 'refs/tags/v1.0';
+    expect(repo.getRelease()).toBe('v1.0');
+  });
+
+  test('Get name of release with caps', () => {
+    context.ref = 'refs/tags/V1.0';
+    expect(repo.getRelease()).toBe('v1.0');
+  });
+
+  test('Get name of release only numbers', () => {
+    context.ref = 'refs/tags/1.0';
+    expect(repo.getRelease()).toBe('1.0');
+  });
+
+  test('Get name of release of non release ref', () => {
+    context.ref = 'refs/head/master';
+    expect(repo.getRelease()).toBe(null);
+  });
 });
