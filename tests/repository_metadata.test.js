@@ -3,7 +3,7 @@ const repo = require('../src/repository_metadata.js');
 
 describe('Get repository name, branch and release tag from git ref', () => {
   test('Get name of repository', () => {
-    context.repository = 'thenotcompany/some-repository';
+    context.payload.repository = { name: 'some-repository' };
     expect(repo.getName()).toBe('some-repository');
   });
 

@@ -25199,9 +25199,8 @@ const core = __webpack_require__(470);
 
 
 const getName = () => {
-  core.info(Object.keys(context));
-  const slug = context.repository.toLowerCase();
-  const repository = slug.split('/').pop();
+  core.info(context.payload.repository.name);
+  const repository = context.payload.repository.name;
   return repository;
 };
 
