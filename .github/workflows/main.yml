@@ -13,8 +13,9 @@ jobs:
   self-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Dockerize step
-        id: dockerize
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: repository metadata
+        id: repository_metadata
         uses: ./
-        run: echo "${{ steps.dockerize.outputs.branch }}"
+      - run: echo "${{ steps.repository_metadata.outputs.branch }}"
