@@ -8397,13 +8397,13 @@ const repo = __webpack_require__(984);
 
 const run = () => {
   try {
-    const name = repo.getName();
+    // const name = repo.getName();
     const branch = repo.getBranch();
-    const release = repo.getRelease();
+    // const release = repo.getRelease();
 
-    core.setOutput('name', name);
+    // core.setOutput('name', name);
     core.setOutput('branch', branch);
-    core.setOutput('release', release);
+    // core.setOutput('release', release);
   } catch (error) {
     core.setFailed(error.message);
   }
@@ -25194,10 +25194,10 @@ function onceStrict (fn) {
 
 const { context } = __webpack_require__(469);
 
-const getName = () => {
-  const repository = context.repository.toLowerCase().split('/').pop();
-  return repository;
-};
+// const getName = () => {
+//   const repository = context.repository.toLowerCase().split('/').pop();
+//   return repository;
+// };
 
 const getBranch = () => {
   const branch = context.ref.toLowerCase().split('/').pop();
@@ -25205,19 +25205,19 @@ const getBranch = () => {
 };
 
 
-const getRelease = () => {
-  if (context.ref.includes('refs/tags/')) {
-    const release = context.ref.toLowerCase().split('/').pop();
-    return release;
-  }
-  return null;
-};
+// const getRelease = () => {
+//   if (context.ref.includes('refs/tags/')) {
+//     const release = context.ref.toLowerCase().split('/').pop();
+//     return release;
+//   }
+//   return null;
+// };
 
 
 module.exports = {
-  getName,
+  // getName,
   getBranch,
-  getRelease,
+  // getRelease,
 };
 
 
