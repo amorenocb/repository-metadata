@@ -16,7 +16,7 @@ jobs:
   self-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./
-      - name: Dockerize step
+    - uses: ./
+    - name: Dockerize step
       id: dockerize
       run: "echo ${{ steps.dockerize.outputs.branch }}"
