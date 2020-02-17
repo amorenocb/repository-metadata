@@ -5,6 +5,7 @@
 const { context } = require('@actions/github');
 
 const getName = () => {
+  console.log(context);
   const repository = context.repository.toLowerCase().split('/').pop();
   return repository;
 };
