@@ -15,6 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Dockerize step
-        uses: ./
         id: dockerize
-        run: echo ${{ steps.dockerize.outputs.branch }}
+        uses: ./
+        run: echo "${{ steps.dockerize.outputs.branch }}"
