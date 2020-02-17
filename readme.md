@@ -12,16 +12,15 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A sample job to print the repository's name.
+    name: A sample job to print the repository's current push branch name.
     steps:
-    - name: Hello world action step
-      id: hello
-    - uses: actions/checkout@v1.0
-    - uses: @v1
+      - name: Get repository metadata
+        id: repository_metadata
+        uses: amorenocb/repository-metadata@v0.1.0
 
-    # Use the output from the `hello` step
-    - name: Get repository name
-      run: echo "The repository's name is ${{ steps.hello.outputs.name }}"
+      # Use the output from the `hello` step
+      - name: Get repository name
+        run: echo "${{ steps.repository_metadata.outputs.branch }}"
 ```
 
 ## Outputs
