@@ -1,9 +1,10 @@
 # Repository Metadata Action
 ![](https://github.com/amorenocb/repository-metadata/workflows/Tests/badge.svg)
+
 Based on [Sean Smith's Docker Build Push action](https://github.com/mr-smithers-excellent/docker-build-push).
 > Get a checked out repository's name, branch name and/or release tag if available.
 
-## Usage
+## Usage
 
 ```yml
 on: [push]
@@ -23,7 +24,7 @@ jobs:
       run: echo "The repository's is ${{ steps.hello.outputs.name }}"
 ```
 
-## Outputs
+## Outputs
 
 | Name | Description |
 |---|---|
