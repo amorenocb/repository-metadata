@@ -7,7 +7,7 @@ const core = require('@actions/core');
 
 
 const getName = () => {
-  core.info(context);
+  core.info(Object.keys(context));
   const slug = context.repository.toLowerCase();
   const repository = slug.split('/').pop();
   return repository;
