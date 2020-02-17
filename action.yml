@@ -1,0 +1,16 @@
+name: repository-metadata
+author: Juan Andres Moreno
+description: Simple action to get a checked out repository's name, current branch and/or release tag.
+outputs:
+  name:
+    description: 'Repository name.'
+  branch:
+    description: 'Branch name.'
+  release:
+    description: 'Release tag. [if available]'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'info'
+  color: 'green'

@@ -1,0 +1,35 @@
+{
+  "name": "repository-metadata",
+  "version": "0.1.0",
+  "description": "Simple action to get a checked out repository's name, current branch and/or release tag.",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint 'src/**.js' 'tests/**.js' --fix",
+    "test": "eslint 'src/**.js' 'tests/**.js' && jest --coverage",
+    "test:watch": "npm run test -- --watchAll",
+    "build": "ncc build src/index.js"
+  },
+  "keywords": [
+    "Github",
+    "Actions",
+    "Repository",
+    "Metadata"
+  ],
+  "author": "Juan Andres Moreno",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.2",
+    "@actions/github": "^2.1.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.21.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "jest": "^25.1.0"
+  }
+}
