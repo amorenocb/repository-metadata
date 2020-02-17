@@ -9,12 +9,12 @@ describe('Get repository name, branch and release tag from git ref', () => {
 
   test('Get name of master branch', () => {
     context.ref = 'refs/head/master';
-    expect(repo.getBranch()).toBe('Some branch name');
+    expect(repo.getBranch()).toBe('master');
   });
 
   test('Get name of feature branch', () => {
     context.ref = 'refs/head/some-feature';
-    expect(repo.getBranch()).toBe('Some branch name');
+    expect(repo.getBranch()).toBe('some-feature');
   });
 
   // test('Get name of release', () => {

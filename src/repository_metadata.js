@@ -2,7 +2,7 @@
 // Some lines where taken directly from his action at:
 // https://github.com/mr-smithers-excellent/docker-build-push/blob/master/src/docker.js
 
-// const { context } = require('@actions/github');
+const { context } = require('@actions/github');
 
 // const getName = () => {
 //   const repository = context.repository.toLowerCase().split('/').pop();
@@ -10,8 +10,8 @@
 // };
 
 const getBranch = () => {
-  // const branch = context.ref.toLowerCase().split('/').pop();
-  const branch = 'Some branch name';
+  const ref = context.ref.toLowerCase();
+  const branch = ref.split('/').pop();
   return branch;
 };
 
