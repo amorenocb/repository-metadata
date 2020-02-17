@@ -21,7 +21,7 @@ jobs:
 
     # Use the output from the `hello` step
     - name: Get repository name
-      run: echo "The repository's is ${{ steps.hello.outputs.name }}"
+      run: echo "The repository's name is ${{ steps.hello.outputs.name }}"
 ```
 
 ## Outputs

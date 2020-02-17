@@ -12,3 +12,11 @@ jobs:
       - uses: actions/checkout@v1
       - run: npm ci
       - run: npm test
+
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./
+      - name: Dockerize step
+      id: dockerize
+      run: "echo ${{ steps.dockerize.outputs.branch }}"
