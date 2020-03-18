@@ -1,6 +1,6 @@
 {
   "name": "repository-metadata",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple action to get a checked out repository's name, current branch and/or release tag.",
   "main": "src/index.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "test:watch": "npm run test -- --watchAll",
     "build": "ncc build src/index.js"
   },
+  "repository": "https://github.com/amorenocb/repository-metadata",
   "keywords": [
     "Github",
     "Actions",
@@ -18,18 +19,18 @@
   "author": "Juan Andres Moreno",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.2",
-    "@actions/github": "^2.1.0"
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.21.0",
+    "@zeit/ncc": "^0.21.1",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
     "jest": "^25.1.0"
   }
 }
